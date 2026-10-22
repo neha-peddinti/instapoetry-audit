@@ -1,0 +1,18 @@
+Vocabulary: 48012 words with vectors
+Removed from seed lists (in more than one list): ['awesome', 'crap', 'damn', 'fuck']
+
+## lit_col: literary (+) vs colloquial (-)
+seeds with vectors: 125 literary, 110 colloquial
+leave-one-out seed accuracy (sign correct): 0.96
+thresholds: literary if FS >= 0.699, colloquial if FS <= -0.358 (50th percentile of each pole's seed scores)
+words assigned: 293 literary, 323 colloquial
+most literary: haply, dwelt, wherefore, besought, doth, thither, thine, sepulchre, hath, beseech, entreat, saith, splendour, inasmuch, cometh, hastened, dominions, raiment, thyself, unto, strove, excellency, repose, dwells, forsooth
+most colloquial: lol, haha, dude, yeah, thats, damn, cuz, btw, shit, hahaha, yep, anyways, kinda, lmao, gotta, yup, guys, wtf, huh, crazy, kidding, crap, ok, hahah, gonna
+
+## subj_obj: subjective (+) vs objective (-)
+seeds with vectors: 146 subjective, 112 objective
+leave-one-out seed accuracy (sign correct): 0.95
+thresholds: subjective if FS >= 0.492, objective if FS <= -0.474 (50th percentile of each pole's seed scores)
+words assigned: 2549 subjective, 1097 objective
+most subjective: hilarious, freakin, effing, badass, fuckin, awesome, friggin, freaking, bastard, unbelievable, mesmerizing, gorgeous, goddamn, deliciously, hilariously, kickass, frickin, wicked, creepy, insanely, brilliant, mad, crazy, downright, disgusting
+most objective: specified, determine, required, determining, accordance, applicable, corresponding, parameters, specifying, determines, specify, indicated, specifies, requirements, evaluation, requirement, authorization, assessed, utilization, evaluated, hereinafter, verify, applicant, allocated, evaluate
