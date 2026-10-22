@@ -45,7 +45,7 @@ First need to populate `data/poems.json` with entries like this:
 ]
 ```
 
-## Run the analysis
+## Running PCA analysis
 
 ```bash
 python3 -m venv .venv
@@ -54,4 +54,3 @@ pip install -r requirements.txt
 python3 src/pca_analysis.py --data data/poems.json --output outputs/pca_poem_projection.png
 ```
 
-The script will print per-poem PCA coordinates and save a scatter plot of poems in the first two principal components.
