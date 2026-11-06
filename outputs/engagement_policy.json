@@ -1,0 +1,155 @@
+{
+  "categories": [
+    "uncategorized"
+  ],
+  "category_summary": {
+    "uncategorized": {
+      "count": 86,
+      "avg_sentiment_load": 0.11975779581106787
+    }
+  },
+  "rules": {
+    "like_rate": {
+      "threshold": 0.12,
+      "high": 0.2,
+      "weight": 0.4
+    },
+    "save_rate": {
+      "threshold": 0.08,
+      "high": 0.12,
+      "weight": 0.3
+    },
+    "dwell_time_sec": {
+      "threshold": 30.0,
+      "high": 60.0,
+      "weight": 0.3
+    }
+  },
+  "engagement_policies": [
+    {
+      "id": "minimalist_readability",
+      "name": "Minimalist readability",
+      "feature_signals": {
+        "simple_sentence_ratio": {
+          "op": ">=",
+          "value": 0.3333333333333333
+        },
+        "words_per_line": {
+          "op": "<=",
+          "value": 4.863636363636363
+        },
+        "nrc_positive": {
+          "op": ">=",
+          "value": 0.06711409395973154
+        }
+      },
+      "interaction_targets": {
+        "like_rate": 0.18,
+        "save_rate": 0.1,
+        "dwell_time_sec": 40
+      },
+      "rationale": "Short, readable lines with low complexity tend to attract quick likes and repeat viewing."
+    },
+    {
+      "id": "affective_optimism",
+      "name": "Affective optimism",
+      "feature_signals": {
+        "nrc_positive": {
+          "op": ">=",
+          "value": 0.09782608695652174
+        },
+        "empath_psych_theme": {
+          "op": ">=",
+          "value": 0.020618556701030927
+        },
+        "words_per_line": {
+          "op": "<=",
+          "value": 5.933333333333334
+        }
+      },
+      "interaction_targets": {
+        "like_rate": 0.2,
+        "save_rate": 0.12,
+        "dwell_time_sec": 45
+      },
+      "rationale": "Warm, psychologically resonant poems often get fast likes and meaningful saves."
+    },
+    {
+      "id": "grief_retention",
+      "name": "Grief retention",
+      "feature_signals": {
+        "nrc_negative": {
+          "op": ">=",
+          "value": 0.06153846153846154
+        },
+        "empath_psych_theme": {
+          "op": ">=",
+          "value": 0.034782608695652174
+        },
+        "dwell_time_sec": {
+          "op": ">=",
+          "value": 0.0
+        }
+      },
+      "interaction_targets": {
+        "like_rate": 0.14,
+        "save_rate": 0.13,
+        "dwell_time_sec": 55
+      },
+      "rationale": "Emotionally heavy poems may not spike likes immediately, but they often drive longer dwell and stronger saves."
+    },
+    {
+      "id": "lexical_depth",
+      "name": "Lexical depth / complexity",
+      "feature_signals": {
+        "mattr": {
+          "op": ">=",
+          "value": 0.9666666666666666
+        },
+        "complex_sentence_ratio": {
+          "op": ">=",
+          "value": 0.625
+        },
+        "concreteness": {
+          "op": ">=",
+          "value": 3.1815625
+        }
+      },
+      "interaction_targets": {
+        "like_rate": 0.12,
+        "save_rate": 0.11,
+        "dwell_time_sec": 60
+      },
+      "rationale": "More complex, lexically rich poems often reward sustained reading and later revisits."
+    },
+    {
+      "id": "high_emotional_density",
+      "name": "High emotional density",
+      "feature_signals": {
+        "nrc_negative": {
+          "op": ">=",
+          "value": 0.038461538461538464
+        },
+        "empath_physical_theme": {
+          "op": ">=",
+          "value": 0.00819672131147541
+        },
+        "subj_obj_score": {
+          "op": ">=",
+          "value": 1.0
+        }
+      },
+      "interaction_targets": {
+        "like_rate": 0.16,
+        "save_rate": 0.13,
+        "dwell_time_sec": 50
+      },
+      "rationale": "Emotionally dense poems often perform best when the language is vivid and body-oriented rather than purely abstract."
+    }
+  ],
+  "policy_notes": {
+    "like_rate": "Use this as a view-through signal; optimize for sustained attention, not just initial approval.",
+    "save_rate": "Saves indicate a post is useful, revisitable, or emotionally portable.",
+    "dwell_time_sec": "Dwell time is the strongest proxy for whether a poem is actually being read rather than simply seen."
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "input_path": "data/poems.json",
+  "n_requested": 100,
+  "n_loaded": 16,
+  "n_valid": 16,
+  "n_invalid": 0,
+  "feature_names": [
+    "concreteness",
+    "absolutist",
+    "subj_obj_score",
+    "word_freq",
+    "mattr",
+    "simple_sentence_ratio",
+    "complex_sentence_ratio",
+    "compound_sentence_ratio",
+    "nrc_positive",
+    "nrc_negative",
+    "empath_psych_theme",
+    "empath_physical_theme",
+    "n_words",
+    "n_lines",
+    "words_per_line",
+    "lowercase_ratio",
+    "enjambment"
+  ],
+  "summary": {
+    "n_samples": 16,
+    "n_features": 17,
+    "mean": 4.297933268802263,
+    "std": 13.880470977241991,
+    "min": 0.0,
+    "max": 166.0
+  },
+  "bad_entries": []
+}
